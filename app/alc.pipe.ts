@@ -10,11 +10,11 @@ export class AlcPipe implements PipeTransform {
     var desiredAlcState = args[0];
     if(desiredAlcState === "high") {
       return input.filter((beer) => {
-        return beer.alcoholContent > 10;
+        return beer.alcoholContent >= 10;
       });
     } else if (desiredAlcState === "medium") {
       return input.filter((beer) => {
-        return beer.alcoholContent > 7 && beer.alcoholContent < 10;
+        return beer.alcoholContent >= 7 && beer.alcoholContent < 10;
       });
     } else if (desiredAlcState === "low") {
       return input.filter((beer) => {

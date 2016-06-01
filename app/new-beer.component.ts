@@ -5,26 +5,21 @@ import {Beer} from './beer.model';
   selector: 'new-beer',
   outputs: ['onSubmitNewBeer'],
   template: `
-    <div class="beer-form">
+    <div class="form clearfix">
       <h3>Create Beer:</h3>
-      <div class="col-md-4">
-        <input placeholder="Description" class="input-lg" #newDescription>
+      <div class="form-group">
+        <input placeholder="Name Of Beer" class="input-lg" #newBeerName>
       </div>
-      <div class="col-md-4">
-        <select class="form-control" class="input-lg" #newPriority>
-          <option value="high">High</option>
-          <option value="medium">Medium</option>
-          <option value="low">Low</option>
-        </select>
+      <div class="form-group">
+        <input placeholder="Name Of Brewery" class="input-lg" #newBreweryName>
       </div>
-      <div class="col-md-4">
-        <select class="form-control" class="input-lg" #newCategory>
-          <option value="home">Home</option>
-          <option value="work">Work</option>
-          <option value="hobby">Hobby</option>
-        </select>
+      <div class="form-group">
+        <input placeholder="Price Of Beer($)" class="input-lg" #newPrice>
       </div>
-      <button (click)="addBeer(newDescription, newPriority, newCategory)" class="btn btn-success btn-lg add-button">Add</button>
+      <div class="form-group">
+        <input placeholder="Alcohol Content(%)" class="input-lg" #newAlc>
+      </div>
+      <button (click)="addBeer(newBeerName, newBreweryName, newPrice, newAlc)" class="btn btn-success btn-lg add-button">Add</button>
     </div>
   `
 })
@@ -34,7 +29,7 @@ export class NewBeerComponent {
     this.onSubmitNewBeer = new EventEmitter();
   }
   addBeer(userBeerName: HTMLInputElement, userBreweryName: HTMLInputElement, userBeerPrice: HTMLInputElement, userAlcoholContent: HTMLInputElement){
-    var myNewBeer = new Beer(userBeerName.value, 0, userBreweryName.value, parseFloat(userBeerPrice.value), parseFloat(userAlcoholContent.value));
+    var myNewBeer = new Beer(userBeerName.value, 0, userBreweryName.value, parseFloat(userBeerPrice.value), parseFloat(userAlcoholContent.value), 124 );
    this.onSubmitNewBeer.emit(myNewBeer);
 
  }

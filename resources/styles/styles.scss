@@ -6,53 +6,47 @@ $medium : #E59400;
 $low : #008000;
 
 .selected {
-  label{
+  h3{
     color: $selected !important;
   }
 }
 .high {
-  label{
+  h3{
     color: $high !important;
   }
 }
 .medium {
-  label{
+  h3{
     color: $medium !important;
   }
 }
 .low {
-  label{
+  h3{
     color: $low !important;
   }
 }
 .container{
-  h1, h2, label{
+  h1, h2, h3{
     color: $gray;
   }
-  label{
+  h3{
     font-size: 20px;
   }
   background-color: $darkgray;
-  .task-form {
-    margin-top: 80px;
-    margin-bottom: 80px;
-    input, select{
-      width: 100%;
-    }
+
+  input, select{
+    width: 100%;
   }
+
 }
 .add-button {
   margin-top: 20px;
   margin-bottom: 10px;
-  margin-left: 16px;
   padding-top: 8px;
   padding-bottom: 8px;
 }
-.mycheckbox{
-  input{
-    margin-left: 16px;
-  }
-
+.inline {
+  display: inline-block;
 }
 
 .filter {
@@ -63,3 +57,4 @@ $low : #008000;
   font-size: 5vmin;
   text-align: center;
 }
+.clearBoth { clear:both; }
