@@ -10,9 +10,7 @@ import { Beer } from './beer.model';
     <div class="col-md-8">
       <h3><strong *ngIf="beer.low && beer.pintsRemaining > 0"><u>*{{ beer.nameOfBeer }}, {{ beer.brand}}, \${{ beer.price}}, {{ beer.alcoholContent}}%*</u></strong><span *ngIf="!beer.low">{{ beer.nameOfBeer }}, {{ beer.brand}}, \${{ beer.price}}, {{ beer.alcoholContent}}%</span><del *ngIf="beer.pintsRemaining === 0">{{ beer.nameOfBeer }}, {{ beer.brand}}, \${{ beer.price}}, {{ beer.alcoholContent}}%</del></h3>
       <div class="progress">
-        <div class="progress-bar progress-bar-striped" [class.progress-bar-success]="beer.pintsRemaining >= 80" [class.progress-bar-warning]="beer.pintsRemaining < 80 && beer.pintsRemaining >=30" [class.progress-bar-danger]="beer.pintsRemaining < 30" role="progressbar" aria-valuemin="0" aria-valuemax="100" [style.width]="changeWidth()">
-          <span class="sr-only">70% Complete</span>
-        </div>
+        <div class="progress-bar progress-bar-striped" [class.progress-bar-success]="beer.pintsRemaining >= 80" [class.progress-bar-warning]="beer.pintsRemaining < 80 && beer.pintsRemaining >=30" [class.progress-bar-danger]="beer.pintsRemaining < 30" role="progressbar" [style.width]="changeWidth()"></div>
       </div>
     </div>
     <div class="col-md-4 inline">
