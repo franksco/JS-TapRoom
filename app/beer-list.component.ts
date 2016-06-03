@@ -19,7 +19,7 @@ export class BeerListComponent {
   public beerList: Beer[];
   public onBeerSelect: EventEmitter<Beer>;
   public selectedBeer: Beer;
-  public filterLow: string = "notLow";
+  public filterLow: string = "all";
   public filterAlc: string = "all";
   constructor() {
     this.onBeerSelect = new EventEmitter();

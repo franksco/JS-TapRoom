@@ -7,7 +7,6 @@ import { Beer } from './beer.model';
   directives: [BeerListComponent],
   template: `
     <div class="container">
-      <h1 class="header">Puzzles?</h1>
       <beer-list
         [beerList]="beers"
         (onBeerSelect)="beerWasSelected($event)">
@@ -24,7 +23,7 @@ export class AppComponent {
         new Beer("Santa's Private Reserve", 1 , "Rogue", 8 , 5, 45),
         new Beer("Imperial Stout", 2, "Dark Star", 12, 10.5, 82),
         new Beer("Dopple Shot - Double Bock", 3, "Maui Brewing", 14, 8.2, 21),
-        new Beer("Miller High Life", 4, "Miller Brewing", 3, 4.6, 37)
+        new Beer("Miller High Life", 4, "Miller Brewing", 3, 4.6, 9)
       ];
      }
   beerWasSelected(clickedBeer: Beer): void {

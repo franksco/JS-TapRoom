@@ -5,6 +5,9 @@ $high : #CC0000;
 $medium : #E59400;
 $low : #008000;
 
+body{
+  background-color: $darkgray; 
+}
 .selected {
   h3{
     color: $selected !important;
@@ -25,7 +28,18 @@ $low : #008000;
     color: $low !important;
   }
 }
+.jumbotron{
+  height: 15vh;
+  margin-bottom: 0;
+  h1{
+    text-align: center;
+  }
+
+
+}
 .container{
+  height: 85vh;
+  margin-top: 0;
   h1, h2, h3{
     color: $gray;
   }
