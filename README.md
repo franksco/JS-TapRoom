@@ -1,14 +1,12 @@
-# Git Info
+# Js-TapRoom
 
-#### JavaScript Week 1 Independent Project
-
-#### by Garrett Biernat 5/27
+#### by Cory Franks 5/27
 ## Description
-A web page made in with JavaScript and HTML that allows you to search any GitHub username and get all their public repositories
+A web app that allows you to add an beer/cider beverage and see what type they are, ther alc % how mant pints are left, and which ones are empty. 
 
 ## Setup/Installation Requirements
 
-* Clone repository or visit: http://gdbmedia.github.io/GitHubInfo/
+* Clone repository
 * Install Node Package Manager
 * Install Gulp global
 * Install Bower global 
@@ -26,10 +24,11 @@ None so far
 * Bower
 * Sass
 * Gulp
-* GitHub Api
+* Angular 2
+* TypeScript
 
 ### License
 
 MIT License
 
-Copyright (c) 2016 GDB Media, Inc.
+Copyright (c) 2016 Cory Franks, Inc.
